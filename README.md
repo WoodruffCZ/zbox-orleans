@@ -25,17 +25,23 @@ Vaším úkolem je vytvořit demonstrační projekt s využitím Microsoft Orlea
 
 6. **Bezstavový grain (stateless)**: Vytvořte bezstavový grain, který má maximální propustnost v možnostech volání metod grainu.
 
-7. **Orleans Dashboard**: Integrujte svůj projekt s Orleans Dashboard pro lepší monitorování a ladění.
+7. **Distributed Transactions**: Vytvořte přiklad grainů, které ukazují, jak v Orleans provádět distribuované transakce. Mohlo by to být například jednoduché bankovní rozhraní, kde můžete převádět peníze mezi účty a musíte se ujistit, že transakce jsou konzistentní.
 
-8. **Hostovaná služba, která volání 'bezstavový grain (stateless)'**: Vytvořte co-hostovanou službu v ramci stejného runtime za pomoci 'IHostedService', ve které budete maximalní možnou rychlostí volat bezstavový grain (stateless). Ověřte si počty volání za sekundu v Dashbordu.
+8. **Timers and Reminders**: Vytvořte příklad grainu, který ukazuje, jak používat timers a reminders v Orleans.
 
-7. **Podpora více Sil**: Rozšiřte svůj projekt tak, aby podporoval více sil. Pro demonstraci stačí dvě sila.
+9. **Reentrant Grains**: Vytvořte grain, který demonstruje použití vlatnosti reentrant v Orleans.
 
-8. **Virtuální streamy**: Implementujte virtuální streamy v Orleans pro asynchronní komunikaci mezi grainy.
+10. **Orleans Dashboard**: Integrujte svůj projekt s Orleans Dashboard pro lepší monitorování a ladění.
 
-9. **Pub/Sub vzor**: Využijte Orleans pro implementaci publish/subscribe vzoru pro asynchronní zpracování událostí.
+11. **Hostovaná služba, která volání 'bezstavový grain (stateless)'**: Vytvořte co-hostovanou službu v ramci stejného runtime za pomoci 'IHostedService', ve které budete maximalní možnou rychlostí volat bezstavový grain (stateless). Ověřte si počty volání za sekundu v Dashbordu.
 
-10. **Agregační vzor**: Demonstrujte, jak lze v Orleans implementovat agregační vzor.
+12. **Podpora více Sil**: Rozšiřte svůj projekt tak, aby podporoval více sil. Pro demonstraci stačí dvě sila.
+
+13. **Virtuální streamy**: Implementujte virtuální streamy v Orleans pro asynchronní komunikaci mezi grainy.
+
+14. **Pub/Sub vzor**: Využijte Orleans pro implementaci publish/subscribe vzoru pro asynchronní zpracování událostí.
+
+15. **Agregační vzor**: Demonstrujte, jak lze v Orleans implementovat agregační vzor.
 
 Vaším cílem je ukázat, jak efektivně využívat Orleans 7 pro distribuované výpočty a jak správně pracovat se stavovými a bezstavovými grainy, virtuálními streamy a dalšími funkcemi Orleans. Výsledný projekt by měl být dobře strukturovaný a komentovaný, aby bylo možné pochopit jednotlivé kroky a jejich účel.
 
