@@ -1,4 +1,4 @@
-namespace ZboxOrleans;
+namespace ZboxOrleans.GrainStates;
 
 public record PrimaryGrainState
 {
