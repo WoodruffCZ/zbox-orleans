@@ -2,11 +2,17 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Orleans.Transactions;
 using ZboxOrleans.Grains.Interfaces;
+using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-public class DistributedTransactionsTests : TestBase
+[Collection(nameof(AzuriteCollection))]
+public class DistributedTransactionsAzuriteTests : AzuriteTestBase
 {
+    public DistributedTransactionsAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    {
+    }
+
     [Fact]
     public async Task TransactionSuccessful()
     {

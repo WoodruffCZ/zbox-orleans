@@ -1,10 +1,16 @@
 using FluentAssertions;
 using ZboxOrleans.Grains.Interfaces;
+using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-public class PocoGrainTests : TestBase
+[Collection(nameof(AzuriteCollection))]
+public class PocoGrainAzuriteTests : AzuriteTestBase
 {
+    public PocoGrainAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    {
+    }
+
     [Fact]
     public async Task Sent_PocoGrainId_Equals_Returned()
     {

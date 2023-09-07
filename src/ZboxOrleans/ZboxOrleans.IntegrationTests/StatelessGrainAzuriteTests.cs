@@ -3,14 +3,16 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit.Abstractions;
 using ZboxOrleans.Grains.Interfaces;
+using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-public class StatelessGrainTests : TestBase
+[Collection(nameof(AzuriteCollection))]
+public class StatelessGrainAzuriteTests : AzuriteTestBase
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public StatelessGrainTests(ITestOutputHelper testOutputHelper)
+    public StatelessGrainAzuriteTests(AzuriteApplicationFactory factory, ITestOutputHelper testOutputHelper) : base(factory)
     {
         _testOutputHelper = testOutputHelper;
     }

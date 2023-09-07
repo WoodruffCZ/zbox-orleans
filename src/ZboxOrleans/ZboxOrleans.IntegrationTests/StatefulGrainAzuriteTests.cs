@@ -1,10 +1,16 @@
 using FluentAssertions;
 using ZboxOrleans.Grains.Interfaces;
+using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-public class StatefulGrainTests : TestBase
+[Collection(nameof(AzuriteCollection))]
+public class StatefulGrainAzuriteTests : AzuriteTestBase
 {
+    public StatefulGrainAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    {
+    }
+
     [Fact]
     public async Task Value_Is_Persisted()
     {

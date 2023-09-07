@@ -2,11 +2,17 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using ZboxOrleans.Grains;
 using ZboxOrleans.Grains.Interfaces;
+using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-public class PersistentStatefulGrainTests : TestBase
+[Collection(nameof(AzuriteCollection))]
+public class PersistentStatefulGrainAzuriteTests : AzuriteTestBase
 {
+    public PersistentStatefulGrainAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    {
+    }
+
     [Fact]
     public async Task Sent_PocoGrainId_Equals_Returned()
     {
