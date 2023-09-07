@@ -25,6 +25,6 @@ public class TimerGrainTests : AzuriteTestBase
         var secondsFromLastCall = await timerGrain.GetSecondsFromLastCall();
         secondsFromLastCall.Should().BeGreaterOrEqualTo(3);
 
-
+        await timerGrain.StopTimer();
     }
 }

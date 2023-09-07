@@ -4,21 +4,23 @@ using ZboxOrleans.Grains.Interfaces;
 
 namespace ZboxOrleans.Grains;
 
-public class TimerGrain : IGrainBase, ITimerGrain, IDisposable
+public class TimerGrain : IGrainBase, ITimerGrain
 {
     private readonly ITimerRegistry _timerRegistry;
     public IGrainContext GrainContext { get; }
 
     private int _secondsFromLastCall;
 
+    private IDisposable? _timer;
+
     public Task OnActivateAsync(CancellationToken token)
     {
-        _timerRegistry.RegisterTimer(
+        _timer = _timerRegistry.RegisterTimer(
             GrainContext,
             asyncCallback: static async state =>
             {
-                var qq = (TimerGrain)state;
-                qq._secondsFromLastCall++;
+                var timerGrain = (TimerGrain)state;
+                timerGrain._secondsFromLastCall++;
                 
                 await Task.CompletedTask;
             },
@@ -40,8 +42,9 @@ public class TimerGrain : IGrainBase, ITimerGrain, IDisposable
         return Task.FromResult(_secondsFromLastCall);
     }
 
-    public void Dispose()
+    public Task StopTimer()
     {
-        
+        _timer?.Dispose();
+        return Task.CompletedTask;
     }
 }
