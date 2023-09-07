@@ -138,6 +138,10 @@
             "Microsoft.Orleans.Server": {
               "target": "Package",
               "version": "[7.2.1, )"
+            },
+            "OrleansDashboard": {
+              "target": "Package",
+              "version": "[7.2.2, )"
             }
           },
           "imports": [

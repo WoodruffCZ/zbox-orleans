@@ -13,6 +13,7 @@ public class Program
     {
         return Host.CreateDefaultBuilder(args)
             .UseOrleans(siloBuilder => { siloBuilder
+                .UseDashboard(options => { options.HostSelf = true; })
                 .UseLocalhostClustering()
                 .AddMemoryGrainStorage(Globals.InMemoryStorageProviderName)
                 .AddAzureBlobGrainStorage(Globals.BlobStorageProviderName, options =>

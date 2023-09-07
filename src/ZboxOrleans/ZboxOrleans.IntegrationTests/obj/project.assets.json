@@ -846,6 +846,24 @@
           }
         }
       },
+      "Microsoft.Orleans.Reminders/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Orleans.Core.Abstractions": "7.2.0",
+          "Microsoft.Orleans.Runtime": "7.2.0",
+          "Microsoft.Orleans.Sdk": "7.2.0"
+        },
+        "compile": {
+          "lib/net7.0/Orleans.Reminders.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Orleans.Reminders.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Orleans.Runtime/7.2.1": {
         "type": "package",
         "dependencies": {
@@ -1257,6 +1275,87 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "OpenTelemetry/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Configuration": "3.1.0",
+          "OpenTelemetry.Api.ProviderBuilderExtensions": "1.5.1"
+        },
+        "compile": {
+          "lib/net6.0/OpenTelemetry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OpenTelemetry.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Api/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Api.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Api.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenTelemetry.Api.ProviderBuilderExtensions/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "OpenTelemetry.Api": "1.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OrleansDashboard/7.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Orleans.Reminders": "7.2.0",
+          "Microsoft.Orleans.Sdk": "7.2.0",
+          "OpenTelemetry": "1.5.1",
+          "OrleansDashboard.Core": "7.2.2"
+        },
+        "compile": {
+          "lib/net7.0/OrleansDashboard.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/OrleansDashboard.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "OrleansDashboard.Core/7.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Orleans.Runtime": "7.2.0",
+          "Microsoft.Orleans.Sdk": "7.2.0"
+        },
+        "compile": {
+          "lib/net7.0/OrleansDashboard.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/OrleansDashboard.Core.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2829,7 +2928,8 @@
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Hosting": "7.0.1",
           "Microsoft.Orleans.Persistence.AzureStorage": "7.2.1",
-          "Microsoft.Orleans.Server": "7.2.1"
+          "Microsoft.Orleans.Server": "7.2.1",
+          "OrleansDashboard": "7.2.2"
         },
         "compile": {
           "bin/placeholder/ZboxOrleans.dll": {}
@@ -4049,6 +4149,20 @@
         "microsoft.orleans.persistence.memory.nuspec"
       ]
     },
+    "Microsoft.Orleans.Reminders/7.2.0": {
+      "sha512": "ntT9/hxKQ1KZt6umCMwA6mOO6PUXQ3fKvuMGcTnT/UrSjLZAJGV/BUUrWH6kr0dtRp8VIO86kaZG9vUND+eYMA==",
+      "type": "package",
+      "path": "microsoft.orleans.reminders/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net7.0/Orleans.Reminders.dll",
+        "lib/net7.0/Orleans.Reminders.xml",
+        "logo_128.png",
+        "microsoft.orleans.reminders.7.2.0.nupkg.sha512",
+        "microsoft.orleans.reminders.nuspec"
+      ]
+    },
     "Microsoft.Orleans.Runtime/7.2.1": {
       "sha512": "fGR12LgnrU/Wegw5gguVmKH1YmkdxKMuVntmBmPj7YYBodU29eTe40XZzcmB8xkgLYb20F0Um6DpYSqc9IJPtA==",
       "type": "package",
@@ -4389,6 +4503,84 @@
         "lib/netstandard2.0/NuGet.Frameworks.xml",
         "nuget.frameworks.5.11.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "OpenTelemetry/1.5.1": {
+      "sha512": "bWTspK1v8OnYgGa84+o9pESro3uO5xsfw0CX8ZvuERxbGbvPO4rCcpL2Q36f3tjTORyDszVi8GIDMTCM9YUFZQ==",
+      "type": "package",
+      "path": "opentelemetry/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.dll",
+        "lib/net462/OpenTelemetry.xml",
+        "lib/net6.0/OpenTelemetry.dll",
+        "lib/net6.0/OpenTelemetry.xml",
+        "lib/netstandard2.0/OpenTelemetry.dll",
+        "lib/netstandard2.0/OpenTelemetry.xml",
+        "lib/netstandard2.1/OpenTelemetry.dll",
+        "lib/netstandard2.1/OpenTelemetry.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.1.5.1.nupkg.sha512",
+        "opentelemetry.nuspec"
+      ]
+    },
+    "OpenTelemetry.Api/1.5.1": {
+      "sha512": "kSvofM5w4PXwINv2UBgyf248N1MQtUiy96q4PBmuEdtXAH6ooyhfu70JYYc/VpVTR4Eja91k7kHFlGtkHHy+Rg==",
+      "type": "package",
+      "path": "opentelemetry.api/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Api.dll",
+        "lib/net462/OpenTelemetry.Api.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.1.5.1.nupkg.sha512",
+        "opentelemetry.api.nuspec"
+      ]
+    },
+    "OpenTelemetry.Api.ProviderBuilderExtensions/1.5.1": {
+      "sha512": "wX+eoSA3WLiAA7tpoDrv/EtvR7xOapAkMb1jZ0xn60wFJ+XnL5OKccbliCvb298hlCnk751BJUaZXASqL5MOnQ==",
+      "type": "package",
+      "path": "opentelemetry.api.providerbuilderextensions/1.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/net462/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll",
+        "lib/netstandard2.0/OpenTelemetry.Api.ProviderBuilderExtensions.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.api.providerbuilderextensions.1.5.1.nupkg.sha512",
+        "opentelemetry.api.providerbuilderextensions.nuspec"
+      ]
+    },
+    "OrleansDashboard/7.2.2": {
+      "sha512": "iOPBVu903BfBfKw6VaxMafQ+tz49PBEHrWOrdouA05qH9M9H8pCy6xUhKLTrpINbS/XGbPuZiBwS3E3xDWBimA==",
+      "type": "package",
+      "path": "orleansdashboard/7.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OrleansLogo.png",
+        "lib/net7.0/OrleansDashboard.dll",
+        "orleansdashboard.7.2.2.nupkg.sha512",
+        "orleansdashboard.nuspec"
+      ]
+    },
+    "OrleansDashboard.Core/7.2.2": {
+      "sha512": "x3C4iL5bG6fvmOeZi9NBtrPaeFKzmwF4lFls7v0LqMUF5AA4N4umUYPpSY/BnWxZEhVCDJFWHahnqgFUF3wEvw==",
+      "type": "package",
+      "path": "orleansdashboard.core/7.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OrleansLogo.png",
+        "lib/net7.0/OrleansDashboard.Core.dll",
+        "orleansdashboard.core.7.2.2.nupkg.sha512",
+        "orleansdashboard.core.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
