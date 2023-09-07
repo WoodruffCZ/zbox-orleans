@@ -6,12 +6,12 @@ using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-[Collection(nameof(AzuriteCollection))]
-public class StatelessGrainAzuriteTests : AzuriteTestBase
+[Collection(nameof(OrleansCollection))]
+public class StatelessGrainTests : TestBase
 {
     private readonly ITestOutputHelper _testOutputHelper;
 
-    public StatelessGrainAzuriteTests(AzuriteApplicationFactory factory, ITestOutputHelper testOutputHelper) : base(factory)
+    public StatelessGrainTests(OrleansApplicationFactory factory, ITestOutputHelper testOutputHelper) : base(factory)
     {
         _testOutputHelper = testOutputHelper;
     }

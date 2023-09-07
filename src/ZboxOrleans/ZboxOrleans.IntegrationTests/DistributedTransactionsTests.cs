@@ -6,10 +6,10 @@ using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-[Collection(nameof(AzuriteCollection))]
-public class DistributedTransactionsAzuriteTests : AzuriteTestBase
+[Collection(nameof(OrleansCollection))]
+public class DistributedTransactionsTests : TestBase
 {
-    public DistributedTransactionsAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    public DistributedTransactionsTests(OrleansApplicationFactory factory) : base(factory)
     {
     }
 

@@ -4,10 +4,10 @@ using ZboxOrleans.IntegrationTests.Fixtures;
 
 namespace ZboxOrleans.IntegrationTests;
 
-[Collection(nameof(AzuriteCollection))]
-public class PocoGrainAzuriteTests : AzuriteTestBase
+[Collection(nameof(OrleansCollection))]
+public class PocoGrainTests : TestBase
 {
-    public PocoGrainAzuriteTests(AzuriteApplicationFactory factory) : base(factory)
+    public PocoGrainTests(OrleansApplicationFactory factory) : base(factory)
     {
     }
 

@@ -4,13 +4,13 @@ using Testcontainers.Azurite;
 
 namespace ZboxOrleans.IntegrationTests.Fixtures;
 
-public class AzuriteApplicationFactory : IAsyncLifetime
+public class OrleansApplicationFactory : IAsyncLifetime
 {
     public IHost Host { get; }
     
     private AzuriteContainer? _azuriteContainer;
     
-    public AzuriteApplicationFactory()
+    public OrleansApplicationFactory()
     {
         Host = Program.CreateHostBuilder(Array.Empty<string>()).Build();
         RunAzurite();
