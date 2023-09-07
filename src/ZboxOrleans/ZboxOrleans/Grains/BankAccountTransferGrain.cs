@@ -3,6 +3,8 @@ using ZboxOrleans.Grains.Interfaces;
 
 namespace ZboxOrleans.Grains;
 
+// 7. Distributed Transactions: Vytvořte přiklad grainů, které ukazují, jak v Orleans provádět distribuované transakce.
+// Mohlo by to být například jednoduché bankovní rozhraní, kde můžete převádět peníze mezi účty a musíte se ujistit, že transakce jsou konzistentní. 
 [StatelessWorker]
 public class BankAccountTransferGrain : Grain, IBankAccountTransferGrain
 {

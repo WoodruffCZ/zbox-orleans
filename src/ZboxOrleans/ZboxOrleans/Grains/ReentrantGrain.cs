@@ -3,6 +3,7 @@ using ZboxOrleans.Grains.Interfaces;
 
 namespace ZboxOrleans.Grains;
 
+// 9. Reentrant Grains: Vytvořte grain, který demonstruje použití vlatnosti reentrant v Orleans.
 [Reentrant]
 public class ReentrantGrain : IReentrantGrain
 {

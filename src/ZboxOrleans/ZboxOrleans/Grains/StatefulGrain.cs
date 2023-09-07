@@ -5,6 +5,7 @@ using ZboxOrleans.GrainStates;
 
 namespace ZboxOrleans.Grains;
 
+// 3. Stavový grain (bez persistence): Vytvořte stavový grain, který udržuje stav mezi voláními, ale není persistován.
 [StorageProvider(ProviderName = Globals.InMemoryStorageProviderName)]
 public class StatefulGrain : Grain<PrimaryGrainState>, IStatefulGrain, IGrainBase
 {

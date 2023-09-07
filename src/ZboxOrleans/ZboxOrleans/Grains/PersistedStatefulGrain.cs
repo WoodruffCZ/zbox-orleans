@@ -5,6 +5,7 @@ using ZboxOrleans.GrainStates;
 
 namespace ZboxOrleans.Grains;
 
+// 4. Stavový grain (s persistencí): Implementujte stavový grain, který svůj stav persistuje. Můžete využít Azure CosmosDB nebo Azure Blob Storage pro persistenci stavu grainu.
 [StorageProvider(ProviderName = Globals.BlobStorageProviderName)]
 public class PersistedStatefulGrain : Grain<PrimaryGrainState>, IPersistedStatefulGrain, IGrainBase
 {

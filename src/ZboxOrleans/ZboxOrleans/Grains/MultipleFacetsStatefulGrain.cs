@@ -4,6 +4,7 @@ using ZboxOrleans.GrainStates;
 
 namespace ZboxOrleans.Grains;
 
+//5. Více stavů v jednom grainu (přes facets): Demonstrujte, jak může grain obsahovat více stavů pomocí Orleans grain facets.
 public class MultipleFacetsStatefulGrain : IMultipleFacetsStatefulGrain
 {
     private readonly IPersistentState<PrimaryGrainState> _primaryGrainState;

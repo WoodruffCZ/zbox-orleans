@@ -4,6 +4,7 @@ using ZboxOrleans.Grains.Interfaces;
 
 namespace ZboxOrleans.Grains;
 
+// 8. Timers and Reminders: Vytvořte příklad grainu, který ukazuje, jak používat timers a reminders v Orleans.
 public class TimerGrain : IGrainBase, ITimerGrain
 {
     private readonly ITimerRegistry _timerRegistry;

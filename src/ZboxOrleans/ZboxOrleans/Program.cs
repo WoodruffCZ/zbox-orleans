@@ -2,6 +2,7 @@
 
 namespace ZboxOrleans;
 
+//1. Orleans Silo: Nastavte prostředí pro Orleans Silo. Toto je základní krok, který je nezbytný pro další práci s Orleans.
 public class Program
 {
     public static async Task Main(string[] args)
@@ -13,7 +14,7 @@ public class Program
     {
         return Host.CreateDefaultBuilder(args)
             .UseOrleans(siloBuilder => { siloBuilder
-                .UseDashboard(options => { options.HostSelf = true; })
+                .UseDashboard(options => { options.HostSelf = true; }) //Orleans Dashboard: Integrujte svůj projekt s Orleans Dashboard pro lepší monitorování a ladění.
                 .UseLocalhostClustering()
                 .AddMemoryGrainStorage(Globals.InMemoryStorageProviderName)
                 .AddAzureBlobGrainStorage(Globals.BlobStorageProviderName, options =>
