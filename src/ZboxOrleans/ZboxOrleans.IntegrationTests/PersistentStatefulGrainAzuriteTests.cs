@@ -1,6 +1,4 @@
 using FluentAssertions;
-using Microsoft.Extensions.DependencyInjection;
-using ZboxOrleans.Grains;
 using ZboxOrleans.Grains.Interfaces;
 using ZboxOrleans.IntegrationTests.Fixtures;
 

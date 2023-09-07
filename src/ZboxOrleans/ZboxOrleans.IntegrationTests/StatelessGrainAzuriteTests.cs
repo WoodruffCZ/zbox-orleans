@@ -1,6 +1,5 @@
 using System.Diagnostics;
 using FluentAssertions;
-using Microsoft.Extensions.DependencyInjection;
 using Xunit.Abstractions;
 using ZboxOrleans.Grains.Interfaces;
 using ZboxOrleans.IntegrationTests.Fixtures;
