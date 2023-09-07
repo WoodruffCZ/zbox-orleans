@@ -20,7 +20,7 @@ public class ReminderGrainTests : TestBase
 
         (await reminderGrain.RemindCalled()).Should().BeFalse();
         
-        await Task.Delay(TimeSpan.FromMinutes(1));
+        await Task.Delay(TimeSpan.FromSeconds(70));
         
         (await reminderGrain.RemindCalled()).Should().BeTrue();
 

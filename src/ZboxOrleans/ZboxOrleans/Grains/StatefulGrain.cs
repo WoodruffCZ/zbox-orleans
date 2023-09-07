@@ -18,7 +18,7 @@ public class StatefulGrain : Grain<PrimaryGrainState>, IStatefulGrain, IGrainBas
     public Task SetValue(string value)
     {
         State.Value = value;
-        return Task.CompletedTask;
+        return WriteStateAsync();
     }
 
     public Task<string?> GetValue()
