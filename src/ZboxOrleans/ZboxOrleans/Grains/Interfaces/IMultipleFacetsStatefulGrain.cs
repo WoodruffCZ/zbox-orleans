@@ -1,4 +1,4 @@
-namespace ZboxOrleans.Grains;
+namespace ZboxOrleans.Grains.Interfaces;
 
 public interface IMultipleFacetsStatefulGrain : IGrainWithGuidKey, IDisposable
 {

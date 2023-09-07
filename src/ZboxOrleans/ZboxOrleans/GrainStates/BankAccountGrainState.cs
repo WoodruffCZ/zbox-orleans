@@ -1,16 +1,7 @@
 namespace ZboxOrleans.GrainStates;
 
+[GenerateSerializer]
 public record BankAccountGrainState
 {
-    public Decimal MoneyAmount { get; private set; } = 0;
-
-    public void DepositMoney(Decimal amount)
-    {
-        MoneyAmount -= amount;
-    }
-    
-    public void WithdrawMoney(Decimal amount)
-    {
-        MoneyAmount += amount;
-    }
+    [Id(0)] public Decimal MoneyAmount { get; set; } = 100; //default amount :)
 }

@@ -1,3 +1,5 @@
+using ZboxOrleans.Grains.Interfaces;
+
 namespace ZboxOrleans.Grains;
 
 public class StatelessGrain : IStatelessGrain

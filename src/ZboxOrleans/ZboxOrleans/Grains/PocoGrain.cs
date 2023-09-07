@@ -1,4 +1,5 @@
 using Orleans.Runtime;
+using ZboxOrleans.Grains.Interfaces;
 
 namespace ZboxOrleans.Grains;
 
